@@ -1,0 +1,36 @@
+{
+  "_nota": "Copiar el bloque 'hooks' (PermissionRequest -> hook-permiso.ts) y 'sandbox' tal cual del claude-settings.json del canal cielo. Verificar los nombres reales de los conectores en la linea system/init del log (journalctl -u evo-yami -f) y ajustar los prefijos mcp__claude_ai_*.",
+  "permissions": {
+    "allow": [
+      "Read", "Glob", "Grep", "Write(./**)", "Edit(./**)",
+      "Bash(ffmpeg:*)", "Bash(ffprobe:*)", "Bash(magick:*)", "Bash(convert:*)",
+      "Bash(python:*)", "Bash(npx remotion:*)", "Bash(pdftoppm:*)", "Bash(rsvg-convert:*)",
+      "mcp__evo__buscar_contactos", "mcp__evo__leer_chat", "mcp__evo__avisar_cielo",
+      "mcp__evo__recordatorio_crear", "mcp__evo__recordatorio_listar", "mcp__evo__recordatorio_borrar",
+      "mcp__claude_ai_Google_Drive__search_files", "mcp__claude_ai_Google_Drive__read_file_content",
+      "mcp__claude_ai_Google_Drive__download_file_content", "mcp__claude_ai_Google_Drive__get_file_metadata",
+      "mcp__claude_ai_Google_Drive__list_recent_files", "mcp__claude_ai_Google_Drive__create_file",
+      "mcp__claude_ai_Google_Drive__copy_file", "mcp__claude_ai_Google_Drive__update_file",
+      "mcp__claude_ai_Google_Docs__*", "mcp__claude_ai_Google_Sheets__*",
+      "mcp__claude_ai_Google_Calendar__list_calendars", "mcp__claude_ai_Google_Calendar__list_events",
+      "mcp__claude_ai_Google_Calendar__search_events", "mcp__claude_ai_Google_Calendar__get_event",
+      "mcp__claude_ai_Google_Calendar__suggest_time", "mcp__claude_ai_Google_Calendar__create_event",
+      "mcp__claude_ai_Google_Calendar__update_event",
+      "mcp__claude_ai_Gmail__search_threads", "mcp__claude_ai_Gmail__get_thread", "mcp__claude_ai_Gmail__create_draft",
+      "mcp__claude_ai_Canva__*",
+      "mcp__redes__redes_cuentas", "mcp__redes__redes_estado", "mcp__redes__redes_metricas"
+    ],
+    "ask": [
+      "mcp__evo__enviar_whatsapp", "mcp__evo__enviar_archivo",
+      "mcp__claude_ai_Google_Drive__share_file", "mcp__claude_ai_Google_Drive__trash_file",
+      "mcp__claude_ai_Google_Calendar__delete_event",
+      "mcp__claude_ai_Gmail__send_message", "mcp__claude_ai_Gmail__reply",
+      "mcp__redes__redes_publicar_instagram", "mcp__redes__redes_publicar_facebook",
+      "Bash"
+    ],
+    "deny": [
+      "mcp__sunsky__*", "mcp__chatwoot__*",
+      "Read(/root/evo-yami/app/.env)", "Read(/root/evo-mk/**)", "Read(**/.env)"
+    ]
+  }
+}

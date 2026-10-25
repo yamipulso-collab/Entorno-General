@@ -1,0 +1,21 @@
+{
+  "_nota": "Igual que yami: copiar 'hooks' y 'sandbox' del settings del canal cielo. Este canal solo lee calendario y propone; crear eventos y escribir a clientas pasa por aprobacion.",
+  "permissions": {
+    "allow": [
+      "Read", "Glob", "Grep",
+      "mcp__evo__avisar_cielo", "mcp__evo__leer_chat", "mcp__evo__buscar_contactos",
+      "mcp__claude_ai_Google_Calendar__list_calendars", "mcp__claude_ai_Google_Calendar__list_events",
+      "mcp__claude_ai_Google_Calendar__search_events", "mcp__claude_ai_Google_Calendar__suggest_time"
+    ],
+    "ask": [
+      "mcp__evo__enviar_whatsapp",
+      "mcp__claude_ai_Google_Calendar__create_event", "mcp__claude_ai_Google_Calendar__update_event",
+      "mcp__claude_ai_Google_Calendar__delete_event"
+    ],
+    "deny": [
+      "Bash", "Write", "Edit",
+      "mcp__sunsky__*", "mcp__chatwoot__*", "mcp__redes__*",
+      "mcp__claude_ai_Google_Drive__*", "mcp__claude_ai_Gmail__*", "mcp__claude_ai_Canva__*"
+    ]
+  }
+}
